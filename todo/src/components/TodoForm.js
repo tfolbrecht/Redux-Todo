@@ -33,7 +33,7 @@ class TodoForm extends React.Component {
         this.setState({ inputText: "" })
         }}>
         <input type="text" placeholder="Add Task" value={this.state.inputText} onChange={this.changeHandler}></input>
-        <button type="submit" >Add Task</button>
+        <button type="submit">✎</button>
         <button type = "button" onClick={() => {this.props.clearCompleted()}}>Clear Completed</button>
       </form>
     );
