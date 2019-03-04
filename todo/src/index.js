@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from './components/reducers';
+import { Provider } from 'react-redux';
+import { reducer } from './components/reducer';
 import './index.css';
 import App from './App';
 
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 ReactDOM.render(
-    <Provider store={createStore(reducers)}>
-    <App />
-    </Provider>, document.getElementById('root'));
+    <Provider store={store}>
+        <App />
+    </Provider>, document.getElementById('root')
+);
