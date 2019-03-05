@@ -34,7 +34,7 @@ class TodoForm extends React.Component {
         }}>
         <input type="text" placeholder="Add Task" value={this.state.inputText} onChange={this.changeHandler}></input>
         <button type="submit">✎</button>
-        <button type = "button" onClick={() => {this.props.clearCompleted()}}>Clear Completed</button>
+        <button type="button" onClick={() => {this.props.clearCompleted()}}>Clear Completed</button>
       </form>
     );
   }

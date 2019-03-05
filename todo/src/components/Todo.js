@@ -8,9 +8,7 @@ const Todo = (props) => {
   return(
     <div>
       <li style={props.completed ? {textDecoration: 'line-through'} : null} onClick={() => {props.toggle(props.id)}}>{props.todo}
-      <div className="delbtn">
         <button onClick={() => {props.removeTodo(props.id)}}>x</button>
-      </div>
       </li>
     </div>
   );
